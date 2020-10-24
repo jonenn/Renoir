@@ -1,0 +1,21 @@
+body {
+   margin: 0;
+}
+
+header {
+   box-shadow: 0 1px 9px rgba(35, 0, 19 , .3);
+
+}
+
+header img {
+   display: block;
+   height: 36px;
+   margin: 0 auto;
+}
+
+
+
+
+@media screen and (min-width: 320px) {
+
+}
