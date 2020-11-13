@@ -31,11 +31,10 @@ header img {
    margin-top: 2px;
 }
 
-.menu {
+nav {
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: space-evenly;
    height: 46px;
    position: fixed;
    top: auto;
@@ -43,11 +42,32 @@ header img {
    right: 0;
    bottom: 0;
    z-index: 1;
+   padding-left: 6%;
+   padding-right: 6%;
    border-top: 1px solid #c3c3c3;
    background-color: var(--nav-background);
 }
 
-.menu a img {
+nav ul {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+   height: inherit;
+   justify-content: space-evenly;
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+   list-style: none;
+}
+
+nav ul li a {
+   display: block;
+}
+
+nav a img {
    display: flex;
    flex-direction: column;
    margin: 0 auto;
@@ -55,17 +75,17 @@ header img {
    height: 18px;
 }
 
-.menu a {
+nav a {
    font-size: .7rem;
    color: #230013;
    text-decoration: none;
 }
 
-.about {
+.menu_ico {
    filter: opacity(54%);
 }
 
-.homeSel {
+.ico_sel {
    filter: none;
 }
 
@@ -116,11 +136,11 @@ header img {
    margin-top: 0;
    top: -42px;
    transition: top .2s ease-out;
-   height: 84vh;
+   height: 1000px;
 }
 
 .hero {
-   height: 36vh;
+   height: 31vh;
    margin-bottom: .6rem;
    overflow: hidden;
    background-image: url("images/la-grenouillere-1869.jpg");
@@ -132,8 +152,8 @@ header img {
 
 .catalogue {
    display: grid;
-   height: 42vh;
-   grid-template: 2fr 1fr / repeat(4, 1fr);
+   height: 48vh;
+   grid-template: 3fr 2.4fr / repeat(4, 1fr);
    gap: .6rem;
 }
 
@@ -142,6 +162,7 @@ header img {
 }
 
 .item:nth-of-type(1) {
+   height: auto;
    grid-column-start: 1;
    grid-column-end: 3;
    background-image: url("images/dance-at-bougival-1883.jpg");
@@ -168,7 +189,7 @@ header img {
    grid-column-end: 4;
    background-image: url("images/studies-of-the-children-1881.jpg");
    background-size: cover;
-   background-position: center -2rem;
+   background-position: center;
 }
 
 .item:nth-of-type(5) {
