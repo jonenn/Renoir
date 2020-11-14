@@ -139,7 +139,7 @@ nav a {
 }
 
 .hero {
-   height: 32vh;
+   height: 60vw;
    margin-bottom: .6rem;
    overflow: hidden;
    background-image: url("images/la-grenouillere-1869.jpg");
@@ -151,8 +151,8 @@ nav a {
 
 .catalogue {
    display: grid;
-   height: 69vh;
-   grid-template: 3fr 2.4fr 1.2fr .9fr / repeat(8, 1fr);
+   /* height: 69vh; */
+   grid-template: 42vw 36vw 18vw 15vw / repeat(8, 1fr);
    gap: .6rem;
 }
 
