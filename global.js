@@ -7,6 +7,13 @@ var search_que = document.querySelector(".search");
 var searching_que = document.querySelector(".searching");
 search_que.addEventListener("click", activate);
 
+var home = document.getElementById("home");
+var discover = document.getElementById("discover");
+var about = document.getElementById("about");
+home.addEventListener("click", selectHome)
+discover.addEventListener("click", selectDiscover)
+about.addEventListener("click", selectAbout)
+
 function activate () {
    if (searching_que.classList.contains("active")) {
       searching_que.classList.remove("active");
@@ -23,4 +30,16 @@ function activate () {
       wrapper.style.paddingBottom="42px";
       search.src="images/close.png";
    }
+}
+
+function selectHome () {
+      home.src="images/homesel.png";
+}
+
+function selectDiscover () {
+      discover.src="images/discoversel.png";
+}
+
+function selectAbout () {
+      about.src="images/aboutsel.png";
 }
