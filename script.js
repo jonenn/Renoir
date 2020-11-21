@@ -1,3 +1,4 @@
+//searchbar
 var content = document.getElementById("contentWrapper");
 var header = document.getElementById("header");
 var searching = document.getElementById("searching");
@@ -7,6 +8,7 @@ var search_que = document.querySelector(".search");
 var searching_que = document.querySelector(".searching");
 search_que.addEventListener("click", activate);
 
+//menu
 var home = document.getElementById("home");
 var discover = document.getElementById("discover");
 var about = document.getElementById("about");
@@ -14,7 +16,12 @@ home.addEventListener("click", selectHome)
 discover.addEventListener("click", selectDiscover)
 about.addEventListener("click", selectAbout)
 
-function activate () {
+//lightbox
+var lightboxDiv = document.getElementById("lightbox");
+var viewport = document.getElementById("viewport");
+var number = "image(1)";
+
+function activate() {
    if (searching_que.classList.contains("active")) {
       searching_que.classList.remove("active");
       content.style.top="-42px";
@@ -32,14 +39,38 @@ function activate () {
    }
 }
 
-function selectHome () {
-      home.src="images/homesel.png";
+function selectHome() {
+   home.src="images/homesel.png";
 }
 
-function selectDiscover () {
-      discover.src="images/discoversel.png";
+function selectDiscover() {
+   discover.src="images/discoversel.png";
 }
 
-function selectAbout () {
-      about.src="images/aboutsel.png";
+function selectAbout() {
+   about.src="images/aboutsel.png";
+}
+
+var source;
+var id;
+
+function select(n) {
+   var src = n.src;
+   var i = n.id;
+   source = src;
+   id = i;
+}
+
+function lightbox() {
+   lightboxDiv.style.display="flex";
+   viewport.setAttribute('content', 'width=device-width, initial-scale=1');
+   document.body.style.overflow="hidden";
+   // switch(n) {
+   //    case 0: 
+      document.getElementById("image-lightbox").src=source;
+   //    break;
+   //    case 1:
+   //    document.getElementById("image-lightbox").src=source;
+   //    break;
+   // }
 }

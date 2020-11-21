@@ -139,12 +139,18 @@ nav a {
 .hero {
    height: 60vw;
    margin-bottom: .6rem;
-   overflow: hidden;
-   background-image: url("images/la-grenouillere-1869.jpg");
-   background-size: cover;
-   background-position: center;
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
+}
+
+.hero-image, .img1, .img2, .img3, .img4, 
+.img5, .img6, .img7, .img8, .img9, 
+.img10, .img11, .img12, .img13, .img14, 
+.img15, .img16, .img17, .img18 {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 
 .catalogue {
@@ -159,38 +165,33 @@ nav a {
    background-position: center;
 }
 
+.img1 {
+   object-position: 0 -1rem;
+}
+
 .item:nth-of-type(1) {
-   height: auto;
    grid-column-start: 1;
    grid-column-end: 5;
-   background-image: url("images/dance-at-bougival-1883.jpg");
-   background-position: center -1rem;
 }
 
 .item:nth-of-type(2) {
    grid-column-start: 5;
    grid-column-end: 9;
-   background-image: url("images/at-the-opera-1880.jpg");
 }
 
 .item:nth-of-type(3) {
    grid-column-start: 1;
    grid-column-end: 3;
-   background-image: url("images/girl-reading-1886.jpg");
-   background-image: url("images/roses-1917.jpg");
 }
 
 .item:nth-of-type(4) {
    grid-column-start: 3;
    grid-column-end: 7;
-   background-image: url("images/studies-of-the-children-1881.jpg");
 }
 
 .item:nth-of-type(5) {
    grid-column-start: 7;
    grid-column-end: 9;
-   background-image: url("images/a-girl-1.jpg");
-   background-position: center top;
 }
 
 .item:nth-of-type(6) {
@@ -208,63 +209,32 @@ nav a {
 .sub-item {
    border-radius: var(--radius);
    height: 100%;
-   background-size: cover;
-   background-position: center;
 }
 
-.sub-item:nth-of-type(1) {
-   background-image: url("images/madame-and-her-daughter.jpg");
+.lightbox {
+   display: none;
+   justify-items: center;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+   background-color: rgba(7, 0, 5, 96%);
+   width: 100%;
+   height: 100%;
 }
 
-.sub-item:nth-of-type(2) {
-   background-image: url("images/flowers.jpg");
+figure {
+   width: fit-content;
+   height: fit-content;
+   margin: auto;
 }
 
-.sub-item:nth-of-type(3) {
-   background-image: url("images/forest-path-1875.jpg");
-   width: 22vw;
-}
-
-.sub-item:nth-of-type(4) {
-   background-image: url("images/sleeping-woman-1897.jpg");
-}
-
-.sub-item:nth-of-type(5) {
-   background-image: url("images/girl-reading-1886.jpg");
-}
-
-.item:nth-of-type(7) {
-   background-image: url("images/young-woman-sewing.jpg");
-}
-
-.item:nth-of-type(8) {
-   background-image: url("images/still-life-with-fish-1.jpg");
-}
-
-.item:nth-of-type(9) {
-   background-image: url("images/chestnut-tree-blooming-1881.jpg");
-}
-
-.item:nth-of-type(10) {
-   background-image: url("images/irene-cahen-1880.jpg");
-}
-
-.item:nth-of-type(11) {
-   background-image: url("images/nude-in-a-chair-1900.jpg");
-   background-position: center top;
-}
-
-.item:nth-of-type(12) {
-   background-image: url("images/sleeping-girl-girl-with-a-cat-1880.jpg");
-   background-position: center top;
-}
-
-.item:nth-of-type(13) {
-   background-image: url("images/the-hatpin-1898.jpg");
-}
-
-.item:nth-of-type(14) {
-   background-image: url("images/the-thinker-1877.jpg");
+figure img {
+   display: block;
+   max-height: 78vh;
+   max-width: 78vw;
+   margin: auto;
 }
 
 @media screen and (min-width: 480px) {
