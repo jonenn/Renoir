@@ -65,12 +65,14 @@ function lightbox() {
    lightboxDiv.style.display="flex";
    viewport.setAttribute('content', 'width=device-width, initial-scale=1');
    document.body.style.overflow="hidden";
-   // switch(n) {
-   //    case 0: 
-      document.getElementById("image-lightbox").src=source;
-   //    break;
-   //    case 1:
-   //    document.getElementById("image-lightbox").src=source;
-   //    break;
-   // }
+   document.getElementById("image-lightbox").src=source;
+}
+
+function next() {
+   if(id<18) {
+      id++;
+   } else {
+      id = 18;
+   }
+   document.getElementById("image-lightbox").src=document.getElementById(id).src;
 }
