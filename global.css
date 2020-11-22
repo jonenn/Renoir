@@ -224,6 +224,23 @@ nav a {
    height: 100%;
 }
 
+.close-lightbox {
+   position: absolute;
+   top: 9px;
+   left: 9px;
+   background-image: url("images/closegallery.png");
+   background-size: cover;
+   background-position: center;
+   background-color: transparent;
+   height: 6vw;
+   width: 6vw;
+   filter: opacity(30%);
+}
+
+.close-lightbox:hover, .close-lightbox:active {
+   filter: opacity(100%);
+}
+
 figure {
    width: fit-content;
    height: fit-content;

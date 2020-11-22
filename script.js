@@ -68,6 +68,12 @@ function lightbox() {
    document.getElementById("image-lightbox").src=source;
 }
 
+function closeLbox() {
+   lightboxDiv.style.display="none";
+   document.body.style.overflow="initial";
+   viewport.setAttribute('content', 'width=device-width, initial-scale=1, , user-scalable=no');
+}
+
 function next() {
    if(id<18) {
       id++;
