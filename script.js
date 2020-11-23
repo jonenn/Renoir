@@ -78,7 +78,7 @@ function next() {
    if(id<18) {
       id++;
    } else {
-      id = 18;
+      id = 1;
    }
    document.getElementById("image-lightbox").src=document.getElementById(id).src;
 }

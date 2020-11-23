@@ -21,8 +21,9 @@ header {
    box-shadow: 0 1px 9px rgba(35, 0, 19 , .3);
 }
 
-header img {
-   height: 50px;
+header a {
+   display: flex;
+   align-items: center;
 }
 
 .search {
@@ -226,8 +227,8 @@ nav a {
 
 .close-lightbox {
    position: absolute;
-   top: 9px;
-   left: 9px;
+   top: 3vw;
+   left: 3vw;
    background-image: url("images/closegallery.png");
    background-size: cover;
    background-position: center;
