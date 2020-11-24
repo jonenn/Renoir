@@ -12,9 +12,6 @@ search_que.addEventListener("click", activate);
 var home = document.getElementById("home");
 var discover = document.getElementById("discover");
 var about = document.getElementById("about");
-home.addEventListener("click", selectHome)
-discover.addEventListener("click", selectDiscover)
-about.addEventListener("click", selectAbout)
 
 //lightbox
 var lightboxDiv = document.getElementById("lightbox");
@@ -39,33 +36,28 @@ function activate() {
    }
 }
 
-function selectHome() {
+home.addEventListener("click", function() {
    home.src="images/homesel.png";
-}
+});
 
-function selectDiscover() {
+discover.addEventListener("click", function() {
    discover.src="images/discoversel.png";
-}
+});
 
-function selectAbout() {
+about.addEventListener("click", function() {
    about.src="images/aboutsel.png";
-}
+});
 
-var source;
-var id;
+var images;
+var chosenOne;
 
-function select(n) {
-   var src = n.src;
-   var i = n.id;
-   source = src;
-   id = i;
-}
-
-function lightbox() {
+function lightbox(ele) {
+   images = document.getElementsByClassName("img");
    lightboxDiv.style.display="flex";
    viewport.setAttribute('content', 'width=device-width, initial-scale=1');
    document.body.style.overflow="hidden";
-   document.getElementById("image-lightbox").src=source;
+   document.getElementById("image-lightbox").src=images[ele].src;
+   chosenOne = ele;
 }
 
 function closeLbox() {
@@ -75,10 +67,10 @@ function closeLbox() {
 }
 
 function next() {
-   if(id<18) {
-      id++;
+   if(chosenOne < images.length - 1) {
+      chosenOne++;
    } else {
-      id = 1;
+      chosenOne = 0;
    }
-   document.getElementById("image-lightbox").src=document.getElementById(id).src;
+   document.getElementById("image-lightbox").src=images[chosenOne].src;
 }

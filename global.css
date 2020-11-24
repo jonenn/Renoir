@@ -144,10 +144,7 @@ nav a {
    border-bottom-right-radius: var(--radius);
 }
 
-.hero-image, .img1, .img2, .img3, .img4, 
-.img5, .img6, .img7, .img8, .img9, 
-.img10, .img11, .img12, .img13, .img14, 
-.img15, .img16, .img17, .img18 {
+.img {
    width: 100%;
    height: 100%;
    object-fit: cover;
@@ -166,7 +163,7 @@ nav a {
    background-position: center;
 }
 
-.img1 {
+.img.a {
    object-position: 0 -1rem;
 }
 
@@ -227,8 +224,8 @@ nav a {
 
 .close-lightbox {
    position: absolute;
-   top: 3vw;
-   left: 3vw;
+   top: 6vw;
+   left: 6vw;
    background-image: url("images/closegallery.png");
    background-size: cover;
    background-position: center;
