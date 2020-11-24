@@ -139,9 +139,10 @@ nav a {
 
 .hero {
    height: 60vw;
-   margin-bottom: .6rem;
+   margin-bottom: .3rem;
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
+   overflow: hidden;
 }
 
 .img {
@@ -154,13 +155,14 @@ nav a {
 .catalogue {
    display: grid;
    grid-template: 53vw 42vw 24vw 15vw / repeat(8, 1fr);
-   gap: .6rem;
+   gap: .3rem;
 }
 
 .item {
    border-radius: var(--radius);
    background-size: cover;
    background-position: center;
+   overflow: hidden;
 }
 
 .img.a {
@@ -199,14 +201,15 @@ nav a {
 
 .sub-catalogue {
    display: grid;
-   grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: repeat(2, 1fr) 30% repeat(2, 1fr);
    height: 100%;
-   gap: .6rem;
+   gap: .3rem;
 }
 
 .sub-item {
    border-radius: var(--radius);
    height: 100%;
+   overflow: hidden;
 }
 
 .lightbox {
