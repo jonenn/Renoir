@@ -1,13 +1,16 @@
-:root {
+/*Discover*/
+html {
    --nav-background: #F5F2F2;
-   --radius: .3rem;
+   --radius: .4em;
+   font-size: 62.5%;
 }
 
 
 body {
+   --gap: .4em;
    margin: 0;
-   font-size: 14px;
    color: #5C5C5C;
+   font-size: 1.4rem;
 }
 
 header {
@@ -76,13 +79,13 @@ nav a img {
 }
 
 nav a {
-   font-size: .7rem;
+   font-size: .8em;
    color: #230013;
    text-decoration: none;
 }
 
 .menu_ico {
-   filter: opacity(54%);
+   filter: opacity(60%);
 }
 
 .ico_sel {
@@ -139,7 +142,7 @@ nav a {
 
 .hero {
    height: 60vw;
-   margin-bottom: .3rem;
+   margin-bottom: var(--gap);
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
    overflow: hidden;
@@ -155,7 +158,7 @@ nav a {
 .catalogue {
    display: grid;
    grid-template: 53vw 42vw 24vw 15vw / repeat(8, 1fr);
-   gap: .3rem;
+   gap: var(--gap);
 }
 
 .item {
@@ -166,7 +169,7 @@ nav a {
 }
 
 .img.a {
-   object-position: 0 -1rem;
+   object-position: 0 -1em;
 }
 
 .item:nth-of-type(1) {
@@ -203,7 +206,7 @@ nav a {
    display: grid;
    grid-template-columns: repeat(2, 1fr) 30% repeat(2, 1fr);
    height: 100%;
-   gap: .3rem;
+   gap: var(--gap);
 }
 
 .sub-item {
@@ -214,7 +217,6 @@ nav a {
 
 .lightbox {
    display: none;
-   justify-items: center;
    position: fixed;
    top: 0;
    right: 0;
@@ -225,16 +227,26 @@ nav a {
    height: 100%;
 }
 
+.dark-close {
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+}
+
 .close-lightbox {
    position: absolute;
-   top: 6vw;
-   left: 6vw;
+   top: 1.5rem;
+   left: 1.5rem;
    background-image: url("images/closegallery.png");
    background-size: cover;
    background-position: center;
    background-color: transparent;
-   height: 6vw;
-   width: 6vw;
+   height: 1.8rem;
+   width: 1.8rem;
    filter: opacity(30%);
 }
 
@@ -243,21 +255,36 @@ nav a {
 }
 
 figure {
+   position: relative;
    width: fit-content;
    height: fit-content;
    margin: auto;
 }
 
 figure img {
+   position: relative;
    display: block;
    max-height: 78vh;
    max-width: 78vw;
    margin: auto;
 }
 
-@media screen and (min-width: 480px) {
-}
+@media screen and (min-width: 768px) {
+   body {
+      font-size: 1.6rem;
+   }
 
+   .contentWrapper {
+      margin: 0 1vw 1vw;
+   }
+
+   .close-lightbox {
+      top: 2.4em;
+      left: 2.4em;
+      width: 1.8en;
+      height: 1.8en;
+   }
+}
 /** 
  * Could not write on search bar input because of z-index was <1.
  * All icons were designed by me. All rights deserved. 
