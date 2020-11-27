@@ -269,6 +269,33 @@ figure img {
    margin: auto;
 }
 
+/*Index*/
+.contentWrapper {
+   margin: 0;
+}
+
+.index-hero img {
+   height: 54vw;
+   width: 100%;
+   object-fit: cover;
+   object-position: 0 36%;
+}
+
+.index-hero h1 {
+   position: absolute;
+   top: 2vh;
+   right: .5vh;
+   left: auto;
+   font-size: 7vw;
+   margin: 0;
+   writing-mode: vertical-lr;
+   text-orientation: upright;
+   mix-blend-mode: difference;
+   color: #D97823;
+   text-transform: uppercase;
+   font-family: 'Big Shoulders Inline Display', cursive;
+}
+
 @media screen and (min-width: 768px) {
    body {
       font-size: 1.6rem;
