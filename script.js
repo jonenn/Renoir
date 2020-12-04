@@ -74,3 +74,13 @@ function next() {
    }
    document.getElementById("image-lightbox").src=images[chosenOne].src;
 }
+
+function previous() {
+   if(chosenOne > 0) {
+      chosenOne--;
+      console.log(chosenOne)
+   } else {
+      chosenOne = 18;
+   }
+   document.getElementById("image-lightbox").src=images[chosenOne].src;
+}

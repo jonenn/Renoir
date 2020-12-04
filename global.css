@@ -293,7 +293,7 @@ nav a {
    filter: opacity(30%);
 }
 
-.close-lightbox:hover, .close-lightbox:active {
+.close-lightbox:hover, .close-lightbox:active, .nav-lightbox:active {
    filter: opacity(100%);
 }
 
@@ -311,6 +311,25 @@ figure img {
    max-width: 78vw;
    margin: auto;
 }
+
+.nav-lightbox {
+   position: absolute;
+   bottom: 0;
+   height: 2.3rem;
+   width: 2.3rem;
+   filter: opacity(30%);
+}
+
+.nav-lightbox.previous {
+   left: calc(50% - 3rem - 4vh);
+   padding: 4vh 0 3vh 4vh;
+}
+
+.nav-lightbox.next {
+   right: calc(50% - 3rem - 4vh);
+   padding: 4vh 4vh 3vh 0;
+}
+
 
 /*Index*/
 
