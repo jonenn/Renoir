@@ -66,21 +66,20 @@ function closeLbox() {
    viewport.setAttribute('content', 'width=device-width, initial-scale=1, , user-scalable=no');
 }
 
-function next() {
-   if(chosenOne < images.length - 1) {
-      chosenOne++;
+function change(n) {
+   if(n == 0) {
+      if(chosenOne > n) {
+         chosenOne--;
+      } else {
+         chosenOne = 18;
+      }
+      document.getElementById("image-lightbox").src=images[chosenOne].src;
    } else {
-      chosenOne = 0;
+      if(chosenOne < images.length - 1) {
+         chosenOne++;
+      } else {
+         chosenOne = 0;
+      }
+      document.getElementById("image-lightbox").src=images[chosenOne].src;
    }
-   document.getElementById("image-lightbox").src=images[chosenOne].src;
-}
-
-function previous() {
-   if(chosenOne > 0) {
-      chosenOne--;
-      console.log(chosenOne)
-   } else {
-      chosenOne = 18;
-   }
-   document.getElementById("image-lightbox").src=images[chosenOne].src;
 }

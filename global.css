@@ -288,12 +288,12 @@ nav a {
    background-size: cover;
    background-position: center;
    background-color: transparent;
-   height: 1.8rem;
-   width: 1.8rem;
+   height: 2.3rem;
+   width: 2.3rem;
    filter: opacity(30%);
 }
 
-.close-lightbox:hover, .close-lightbox:active, .nav-lightbox:active {
+.close-lightbox:active, .nav-lightbox:active {
    filter: opacity(100%);
 }
 
