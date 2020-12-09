@@ -1,22 +1,22 @@
 //searchbar
-var content = document.getElementById("contentWrapper");
-var header = document.getElementById("header");
-var searching = document.getElementById("searching");
-var wrapper = document.getElementById("contentWrapper");
-var search = document.getElementById("search");
-var search_que = document.querySelector(".search");
-var searching_que = document.querySelector(".searching");
+let content = document.getElementById("contentWrapper");
+let header = document.getElementById("header");
+let searching = document.getElementById("searching");
+let wrapper = document.getElementById("contentWrapper");
+let search = document.getElementById("search");
+let search_que = document.querySelector(".search");
+let searching_que = document.querySelector(".searching");
 search_que.addEventListener("click", activate);
 
 //menu
-var home = document.getElementById("home");
-var discover = document.getElementById("discover");
-var about = document.getElementById("about");
+let home = document.getElementById("home");
+let discover = document.getElementById("discover");
+let about = document.getElementById("about");
 
 //lightbox
-var lightboxDiv = document.getElementById("lightbox");
-var viewport = document.getElementById("viewport");
-var number = "image(1)";
+let lightboxDiv = document.getElementById("lightbox");
+let viewport = document.getElementById("viewport");
+let number = "image(1)";
 
 function activate() {
    if (searching_que.classList.contains("active")) {
@@ -48,8 +48,8 @@ about.addEventListener("click", function() {
    about.src="images/aboutsel.png";
 });
 
-var images;
-var chosenOne;
+let images;
+let chosenOne;
 
 function lightbox(ele) {
    images = document.getElementsByClassName("img");
@@ -81,5 +81,15 @@ function change(n) {
          chosenOne = 0;
       }
       document.getElementById("image-lightbox").src=images[chosenOne].src;
+   }
+}
+
+window.addEventListener("scroll", scrollFunc);
+
+function scrollFunc() {
+   let windowScroll = this.scrollY + 1e3;
+   let banner = document.getElementsByClassName("bannerImage");
+   for(let i = 0; i < banner.length; i++) {
+      banner[i].style.transform = `scale( ${windowScroll/1e3})`;
    }
 }
