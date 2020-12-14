@@ -1,7 +1,11 @@
 /*Discover*/
 html {
    --nav-background: #F5F2F2;
+   --black-font: #5C5C5C;
    --radius: .4em;
+   --header-height: 50px;
+   --nav-height: 48px;
+   --main-color: #230013;
    font-size: 62.5%;
 }
 
@@ -10,14 +14,14 @@ body {
    --gap: .4em;
    --scroll-shadow: 18vh;
    margin: 0;
-   color: #5C5C5C;
+   color: var(--black-font);
    font-size: 1.4rem;
 }
 
 header {
    position: relative;
    display: flex;
-   height: 50px;
+   height: var(--header-height);
    z-index: 2;
    flex-direction: row;
    justify-content: space-between;
@@ -40,7 +44,7 @@ nav {
    display: flex;
    flex-direction: row;
    align-items: center;
-   height: 46px;
+   height: var(--nav-height);
    position: fixed;
    top: auto;
    left: 0;
@@ -51,6 +55,7 @@ nav {
    padding-right: 6%;
    border-top: 1px solid #c3c3c3;
    background-color: var(--nav-background);
+   box-sizing: border-box;
 }
 
 nav ul {
@@ -82,7 +87,7 @@ nav a img {
 
 nav a {
    font-size: .8em;
-   color: #230013;
+   color: var(--main-color);
    text-decoration: none;
 }
 
@@ -237,7 +242,7 @@ nav a {
    margin: 1.8em 0;
    text-align: center;
    font-size: 2.7em;
-   color: #230013;
+   color: var(--main-color);
    font-family: 'Raleway', sans-serif;
 }
 
@@ -334,20 +339,37 @@ figure img {
 
 /*Index*/
 
+.contentWrapper.index {
+   margin: 0;
+   overflow: hidden;
+}
+
+.contentWrapper.index > h1 {
+   text-align: center;
+   margin-bottom: .9em;
+   color: var(--main-color);
+   font-size: 2.4em;
+}
+
+.banner-wrapper {
+   margin: 0 3vw 4.2em;
+}
+
+.banner-wrapper.side {
+   display: flex;
+   justify-content: center;
+   margin: 4.2em 0;
+}
+
 .banner {
    position: relative;
    height: 60vw;
-   margin-bottom: var(--gap);
    overflow: hidden;
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
-}
-
-.banner img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   object-position: 50% 66%;
+   background-image: url("images/two-sisters-on-terrace.jpg");
+   background-size: cover;
+   background-position-y: 66%;
 }
 
 .overlay {
@@ -360,6 +382,7 @@ figure img {
    height: 100%;
    background: linear-gradient(
       to bottom,
+      rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 48%)
    );
@@ -378,7 +401,7 @@ figure img {
 .overlay .bioCard {
    position: relative;
    margin: 0;
-   bottom: -3vh;
+   bottom: -4vh;
    color: white;
    font-size: 1.5em;
 }
@@ -390,6 +413,98 @@ figure img {
 .overlay .bioCard a {
    font-size: .6em;
    margin-top: 1.8em;
+}
+
+.featured-wrapper {
+   height: 48vh;
+   margin-bottom: 7.2em;
+}
+
+.featured-content {
+   display: flex;
+   height: 100%;
+   margin: .6em 0;
+   padding: 0 3vw;
+   color: #2E4756;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.featured-content h1 {
+   margin: 0;
+   font-size: 1.5em;
+   text-transform: uppercase;
+   word-wrap: wrap;
+}
+
+.featured-content h6 {
+   margin: 0;
+}
+
+.featured-content p {
+   text-align: center;
+}
+
+.featured {
+   height: 100%;
+   min-width: 60vw;
+   background-size: cover;
+   border-radius: var(--radius);
+   box-shadow: inset 0 0 1px #000000, 0px 5px 7px #999999;
+}
+
+.featured.left {
+   margin-left: -6%;
+   float: left;
+   background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 72%)
+   ), url("images/umbrellas-1886.jpg");
+}
+
+.featured.right {
+   margin-right: -6%;
+   float: right;
+   background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 72%)
+   ), url("images/a-girl-1.jpg");
+   background-position-y: 24%;
+}
+
+.bio {
+   margin-top: 4.2em;
+   padding: 2.4em;
+   background-color: var(--nav-background);
+}
+
+.bio-content {
+   margin: 0 6vw;
+}
+
+.see-more {
+   display: flex;
+   float: right;
+}
+
+.see-more a {
+   display: block;
+   margin: auto 0;
+   text-decoration: none;
+   color: var(--main-color);
+}
+
+.see-more img {
+   display: inline-block;
+   padding-left: .3em;
+   margin: 0;
+   vertical-align: middle;
+   height: 6px;
 }
 
 @media screen and (min-width: 768px) {
