@@ -101,10 +101,10 @@ nav a {
 
 .search_bar {
    border: 1px solid #c3c3c3;
-   border-radius: .8em;
+   border-radius: 1.2em;
    border-style: solid;
-   width: 48vw;
-   height: 2.3em;
+   min-width: 54vw;
+   min-height: 2.5em;
    outline: none;
    background-image: url("images/search.png");
    background-size: 1.5em;
@@ -344,21 +344,8 @@ figure img {
    overflow: hidden;
 }
 
-.contentWrapper.index > h1 {
-   text-align: center;
-   margin-bottom: .9em;
-   color: var(--main-color);
-   font-size: 2.4em;
-}
-
 .banner-wrapper {
-   margin: 0 3vw 4.2em;
-}
-
-.banner-wrapper.side {
-   display: flex;
-   justify-content: center;
-   margin: 4.2em 0;
+   margin: 0 3vw 1em;
 }
 
 .banner {
@@ -413,6 +400,44 @@ figure img {
 .overlay .bioCard a {
    font-size: .6em;
    margin-top: 1.8em;
+}
+
+.aside {
+   margin: 1.8em 0 0;
+   padding: 2.4em;
+   background-color: var(--nav-background);
+}
+
+.bio {
+   margin: 0 6vw;
+}
+
+.see-more {
+   display: flex;
+   float: right;
+}
+
+.see-more a {
+   display: block;
+   margin: auto 0;
+   text-decoration: none;
+   color: var(--main-color);
+}
+
+.see-more img {
+   display: inline-block;
+   padding-left: .3em;
+   margin: 0;
+   vertical-align: middle;
+   height: 6px;
+}
+
+.contentWrapper.index > h1 {
+   text-align: center;
+   margin: 2.4em 6vw 1.5em;
+   color: var(--main-color);
+   font-size: 3em;
+   font-family: 'Raleway', sans-serif;
 }
 
 .featured-wrapper {
@@ -477,34 +502,34 @@ figure img {
    background-position-y: 24%;
 }
 
-.bio {
-   margin-top: 4.2em;
+.contact {
    padding: 2.4em;
-   background-color: var(--nav-background);
+   background-color: #7283A6;
 }
 
-.bio-content {
-   margin: 0 6vw;
+.contact-form {
+   padding: 1em;
 }
 
-.see-more {
-   display: flex;
-   float: right;
-}
-
-.see-more a {
-   display: block;
-   margin: auto 0;
-   text-decoration: none;
-   color: var(--main-color);
-}
-
-.see-more img {
+.contact-form input {
+   margin-top: .6em;
    display: inline-block;
-   padding-left: .3em;
-   margin: 0;
-   vertical-align: middle;
-   height: 6px;
+   background-color: var(--nav-background);
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #c3c3c3;
+}
+
+.contact-form input::placeholder {
+   font-size: .9em;
+}
+
+.contact-form button {
+   display: inline-block;
+   border: none;
+   font-size: .9em;
+   background-color: var(--main-color);
+   color: var(--nav-background);
 }
 
 @media screen and (min-width: 768px) {
