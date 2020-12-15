@@ -345,15 +345,14 @@ figure img {
 }
 
 .banner-wrapper {
-   margin: 0 3vw 1em;
+   margin: 2.1em 3vw 1em;
 }
 
 .banner {
    position: relative;
    height: 60vw;
    overflow: hidden;
-   border-bottom-left-radius: var(--radius);
-   border-bottom-right-radius: var(--radius);
+   border-radius: var(--radius);
    background-image: url("images/two-sisters-on-terrace.jpg");
    background-size: cover;
    background-position-y: 66%;
@@ -388,7 +387,7 @@ figure img {
 .overlay .bioCard {
    position: relative;
    margin: 0;
-   bottom: -4vh;
+   top: 21%;
    color: white;
    font-size: 1.5em;
 }
@@ -403,8 +402,8 @@ figure img {
 }
 
 .aside {
-   margin: 1.8em 0 0;
-   padding: 2.4em;
+   margin: -9em 0 0;
+   padding: 9.3em 2.4em 2.4em;
    background-color: var(--nav-background);
 }
 
@@ -508,7 +507,7 @@ figure img {
 }
 
 .contact-form {
-   padding: 1em;
+   text-align: center;
 }
 
 .contact-form input {
@@ -527,9 +526,13 @@ figure img {
 .contact-form button {
    display: inline-block;
    border: none;
+   border-radius: var(--radius);
+   margin-bottom: 4.8em;
+   padding: 0 .6em;
    font-size: .9em;
-   background-color: var(--main-color);
+   height: 1.2em;
    color: var(--nav-background);
+   background-color: var(--main-color);
 }
 
 @media screen and (min-width: 768px) {
