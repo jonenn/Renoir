@@ -83,13 +83,3 @@ function change(n) {
       document.getElementById("image-lightbox").src=images[chosenOne].src;
    }
 }
-
-window.addEventListener("scroll", scrollFunc);
-
-function scrollFunc() {
-   let windowScroll = this.scrollY + 1e3;
-   let banner = document.getElementsByClassName("bannerImage");
-   for(let i = 0; i < banner.length; i++) {
-      banner[i].style.transform = `scale( ${windowScroll/1e3})`;
-   }
-}

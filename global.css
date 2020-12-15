@@ -354,6 +354,12 @@ figure img {
    overflow: hidden;
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
+}
+
+.banner-bg {
+   position: absolute;
+   height: inherit;
+   width: 100%;
    background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
@@ -364,7 +370,9 @@ figure img {
 }
 
 .banner-content {
-   margin: 36% auto auto;
+   position: absolute;
+   width: 100%;
+   margin: 27% auto auto;
    color: white;
    text-align: center;
    font-size: 1.5em;
