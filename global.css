@@ -6,6 +6,7 @@ html {
    --header-height: 50px;
    --nav-height: 48px;
    --main-color: #230013;
+   --featured-color: #2E4756;
    font-size: 62.5%;
 }
 
@@ -254,7 +255,7 @@ nav a {
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='18' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239fa2b2' fill-opacity='0.36'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.bioCard a {
+.button {
    border: 1px solid;
    padding: .6em .9em;
    text-decoration: none;
@@ -356,6 +357,10 @@ figure img {
    border-bottom-right-radius: var(--radius);
 }
 
+.banner a {
+   height: inherit;
+}
+
 .banner-bg {
    position: absolute;
    height: inherit;
@@ -363,43 +368,27 @@ figure img {
    background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 72%)
+      rgba(0, 0, 0, 60%)
    ), url("images/two-sisters-on-terrace.jpg");
    background-size: cover;
    background-position-y: 66%;
-}
-
-.banner-content {
-   position: absolute;
-   width: 100%;
-   margin: 27% auto auto;
-   color: white;
-   text-align: center;
-   font-size: 1.5em;
-   font-family: 'Raleway', sans-serif;
-}
-
-.banner-content h1 {
-   margin: .6em 12vw;
-}
-
-.banner-content p {
-   font-size: .6em;
-}
-
-.banner-content a {
-   font-size: .6em;
-   margin-top: 1.8em;
+   transform: scale(1);
 }
 
 .aside {
-   margin: -9em 0 0;
-   padding: 9.3em 2.4em 2.4em;
+   margin: -9.6em 0 0;
+   padding: 9.6em 2.4em 2.4em;
    background-color: var(--nav-background);
 }
 
-.bio {
-   margin: 0 6vw;
+.bio-content p{
+   margin: .3em 0;
+}
+
+.bio-content em{
+   display: block;
+   color: #7A7A7A;
+   font-size: .9em;
 }
 
 .see-more {
@@ -424,7 +413,7 @@ figure img {
 
 .contentWrapper.index > h1 {
    text-align: center;
-   margin: 2.4em 6vw 1.5em;
+   margin: 1.8em 6vw 1.5em;
    color: var(--main-color);
    font-size: 3em;
    font-family: 'Raleway', sans-serif;
@@ -440,7 +429,7 @@ figure img {
    height: 100%;
    margin: .6em 0;
    padding: 0 3vw;
-   color: #2E4756;
+   color: var(--featured-color);
    flex-direction: column;
    align-items: center;
    justify-content: center;

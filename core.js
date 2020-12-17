@@ -1,22 +1,21 @@
 //searchbar
-let content = document.getElementById("contentWrapper");
-let header = document.getElementById("header");
-let searching = document.getElementById("searching");
-let wrapper = document.getElementById("contentWrapper");
-let search = document.getElementById("search");
-let search_que = document.querySelector(".search");
-let searching_que = document.querySelector(".searching");
+const content = document.getElementById("contentWrapper");
+const header = document.getElementById("header");
+const searching = document.getElementById("searching");
+const wrapper = document.getElementById("contentWrapper");
+const search = document.getElementById("search");
+const search_que = document.querySelector(".search");
+const searching_que = document.querySelector(".searching");
 search_que.addEventListener("click", activate);
 
 //menu
-let home = document.getElementById("home");
-let discover = document.getElementById("discover");
-let about = document.getElementById("about");
+const home = document.getElementById("home");
+const discover = document.getElementById("discover");
+const about = document.getElementById("about");
 
 //lightbox
-let lightboxDiv = document.getElementById("lightbox");
-let viewport = document.getElementById("viewport");
-let number = "image(1)";
+const lightboxDiv = document.getElementById("lightbox");
+const viewport = document.getElementById("viewport");
 
 function activate() {
    if (searching_que.classList.contains("active")) {
