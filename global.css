@@ -500,19 +500,24 @@ figure img {
    padding: 2.4em;
 }
 
-.see-more {
+.extend {
+   height: 0;
+   overflow: hidden;
+}
+
+.see-more-less {
    display: flex;
    float: right;
 }
 
-.see-more a {
+.see-more-less a {
    display: block;
    margin: auto 0;
    text-decoration: none;
    color: var(--main-color);
 }
 
-.see-more img {
+.see-more-less img {
    display: inline-block;
    padding-left: .3em;
    margin: 0;
