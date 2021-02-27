@@ -253,7 +253,6 @@ nav a {
    width: auto;
    line-height: .9em;
    background-color: transparent;
-   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='18' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239fa2b2' fill-opacity='0.36'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .button {
@@ -466,6 +465,7 @@ figure img {
    display: block;
    color: #7A7A7A;
    font-size: .9em;
+   text-align: right;
 }
 
 /* About */
